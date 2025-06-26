@@ -9,7 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/rentals")
-@CrossOrigin(origins = "http://localhost:5714") // React app origin
+@CrossOrigin(origins = {
+        "http://localhost:5174",
+        "https://share-ngo-frontend-o1ka.vercel.app"
+})
+
 public class RentalController {
 
     @Autowired

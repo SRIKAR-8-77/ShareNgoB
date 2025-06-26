@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/feedback")
-@CrossOrigin(origins = "http://localhost:5714")  // For development, allow all origins. Adjust for production!
+@CrossOrigin(origins = {
+        "http://localhost:5174",
+        "https://share-ngo-frontend-o1ka.vercel.app"
+})
 public class FeedbackController {
 
     private final FeedbackService feedbackService;

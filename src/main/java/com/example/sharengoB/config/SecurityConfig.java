@@ -44,7 +44,11 @@ public class SecurityConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true); // Important for cookies or auth headers
-        config.setAllowedOrigins(List.of("http://localhost:5174"));
+        config.setAllowedOrigins(List.of(
+                "http://localhost:5174", // keep this for local dev
+                "https://share-ngo-frontend-o1ka.vercel.app" // production frontend
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("Authorization", "Cache-Control", "Content-Type", "X-Requested-With"));
         config.setExposedHeaders(List.of("Authorization")); // Optional: allow frontend to read token headers

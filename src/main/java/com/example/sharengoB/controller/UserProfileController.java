@@ -12,7 +12,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/profile")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {
+        "http://localhost:5174",
+        "https://share-ngo-frontend-o1ka.vercel.app"
+})
+
 public class UserProfileController {
 
     @Autowired

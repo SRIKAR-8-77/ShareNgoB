@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "http://localhost:5714")
+@CrossOrigin(origins = {
+        "http://localhost:5174",
+        "https://share-ngo-frontend-o1ka.vercel.app"
+})
+
 public class ContactMessageController {
 
     @Autowired
